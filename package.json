@@ -1,0 +1,68 @@
+{
+  "name": "ignite-jhipster",
+  "description": "A React Native boilerplate for JHipster apps.",
+  "keywords": [
+    "ignite-boilerplate",
+    "react-native",
+    "jhipster-module"
+  ],
+  "license": "Apache-2.0",
+  "repository": "ruddell/ignite-jhipster",
+  "homepage": "https://github.com/ruddell/ignite-jhipster",
+  "version": "3.6.4",
+  "files": [
+    "boilerplate",
+    "commands",
+    "src",
+    "templates",
+    "boilerplate.js",
+    "plugin.js",
+    "ignite.json",
+    "options.js"
+  ],
+  "author": {
+    "name": "Jon Ruddell",
+    "email": "jonathan.ruddell@gmail.com",
+    "url": "https://github.com/ruddell/ignite-jhipster"
+  },
+  "scripts": {
+    "lint": "eslint ./src ./test ./*.js --ext js",
+    "test": "jest test/*.js --runInBand",
+    "watch": "jest test/*.js --runInBand --watch",
+    "precommit": "lint-staged",
+    "prettier": "prettier --write \"src/**/*.js\" \"test/**/*.js\"  \"**/*.md\"",
+    "coverage": "jest test/*.js --runInBand --coverage"
+  },
+  "devDependencies": {
+    "babel-eslint": "10.1.0",
+    "eslint": "7.18.0",
+    "eslint-config-prettier": "7.2.0",
+    "jest": "26.6.3",
+    "lint-staged": "10.5.3"
+  },
+  "dependencies": {
+    "fs-extra": "9.1.0",
+    "insight": "0.10.3",
+    "jhipster-core": "7.3.4",
+    "pluralize": "8.0.0",
+    "prettier": "2.2.1",
+    "ramda": "0.27.1",
+    "rimraf": "3.0.2",
+    "semver": "7.3.4"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "boilerplate/"
+    ]
+  },
+  "lint-staged": {
+    "{,app/**/,src/**/,test/**/}*.{js}": [
+      "prettier --write",
+      "eslint --fix --ext .js"
+    ],
+    "{,**/}*.{md}": [
+      "prettier --write"
+    ]
+  }
+}
