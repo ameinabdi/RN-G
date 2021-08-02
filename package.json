@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "fs-extra": "9.1.0",
-    "insight": "0.10.3",
+    "insight": "0.11.0",
     "jhipster-core": "7.3.4",
     "pluralize": "8.0.0",
     "prettier": "2.2.1",
